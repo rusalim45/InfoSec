@@ -1,0 +1,4 @@
+# Lab 8 commands (sample)
+sudo apt install vim
+cd /Desktop/InfoSec/lab08
+vim file.txt
