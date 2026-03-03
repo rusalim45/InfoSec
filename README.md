@@ -1,13 +1,15 @@
-#Information Security Course – Laboratory Works
+# Information Security Course – Laboratory Works  
+**Made By:** Rustam Alimov  
+**ID:** 11423  
 
-Made By: Rustam Alimov
-ID: 11423
+This repository contains all laboratory works completed for the **Information Security** course at AUCA.  
+The structure follows the course progression: hands-on Linux, system administration, networking, automation, and secure coding practices.
 
-This repository contains all laboratory works completed for the Information Security course at AUCA.
-The labs focus on practical skills in Linux system administration, networking, automation, web server configuration, and secure coding practices. Each lab demonstrates hands-on implementation and testing performed in a controlled Ubuntu virtual machine environment.
+---
 
-##📂Repository Structure
-text
+## 📂 Repository Structure
+
+```text
 Infosec/
 │
 ├── lab01/
@@ -25,35 +27,32 @@ Infosec/
 ├── lab13/
 │
 └── README.md
+```
+
+Each lab folder contains the corresponding assignment implementation, configuration files, scripts, reports, and supporting documentation.
+
 ---
 
-Course Coverage
+## 🛠 Course Coverage
 
 The laboratory work includes practical implementation of:
 
-Linux command-line operations
+- Linux command-line operations  
+- File permissions and user/group management  
+- Bash scripting and automation  
+- Cron job scheduling  
+- Package management and troubleshooting  
+- NGINX web server configuration  
+- Reverse proxy setup using `proxy_pass`  
+- API interaction and testing  
+- Basic penetration testing tools  
+- Secure coding principles  
 
-File permissions and user/group management
+All labs were performed and tested in an Ubuntu virtual machine environment.
 
-Bash scripting and automation
+---
 
-Cron job scheduling
-
-Package management and troubleshooting
-
-NGINX web server configuration
-
-Reverse proxy setup using proxy_pass
-
-API interaction and testing
-
-Basic penetration testing tools
-
-Secure coding principles
-
-All labs were performed and tested in an Ubuntu virtual machine environment
-
-Academic Disclaimer
+## ⚠️ Academic Disclaimer
 
 This repository is created strictly for educational purposes as part of the Information Security course.
 
