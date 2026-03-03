@@ -1,14 +1,13 @@
-Information Security Course – Laboratory Works
+#Information Security Course – Laboratory Works
 
 Made By: Rustam Alimov
 ID: 11423
 
 This repository contains all laboratory works completed for the Information Security course at AUCA.
-
 The labs focus on practical skills in Linux system administration, networking, automation, web server configuration, and secure coding practices. Each lab demonstrates hands-on implementation and testing performed in a controlled Ubuntu virtual machine environment.
 
-Repository Structure
-
+##📂Repository Structure
+text
 Infosec/
 │
 ├── lab01/
@@ -26,20 +25,19 @@ Infosec/
 ├── lab13/
 │
 └── README.md
+---
 
-Each folder contains the corresponding laboratory assignment, including scripts, configuration files, reports, and supporting documentation where required.
+Course Coverage
 
-Course Focus Areas
+The laboratory work includes practical implementation of:
 
-The laboratory work covers:
+Linux command-line operations
 
-Linux command-line usage
+File permissions and user/group management
 
-File permissions and user management
+Bash scripting and automation
 
-Bash scripting
-
-Cron automation
+Cron job scheduling
 
 Package management and troubleshooting
 
@@ -49,11 +47,11 @@ Reverse proxy setup using proxy_pass
 
 API interaction and testing
 
-Basic penetration testing concepts
+Basic penetration testing tools
 
-Secure coding practices
+Secure coding principles
 
-All labs were completed and tested in an Ubuntu virtual machine environment.
+All labs were performed and tested in an Ubuntu virtual machine environment
 
 Academic Disclaimer
 
