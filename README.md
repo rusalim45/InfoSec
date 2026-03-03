@@ -1,39 +1,64 @@
+Information Security Course – Laboratory Works
 
-# Information Security Course – Labs & Final Project
-Made By: Rustam Alimov ID 11423
+Made By: Rustam Alimov
+ID: 11423
 
-This repository contains all laboratory works and the final project completed for the **Information Security** course at AUCA.  
-The structure follows the course progression: hands-on Linux, system administration, automation, and secure coding practices.
+This repository contains all laboratory works completed for the Information Security course at AUCA.
 
----
+The labs focus on practical skills in Linux system administration, networking, automation, web server configuration, and secure coding practices. Each lab demonstrates hands-on implementation and testing performed in a controlled Ubuntu virtual machine environment.
 
-## 📂 Repository Structure
-```text
+Repository Structure
+
 Infosec/
 │
-├── lab01 … lab13/ # All required lab assignments
+├── lab01/
+├── lab02/
+├── lab03/
+├── lab04/
+├── lab05/
+├── lab06/
+├── lab07/
+├── lab08/
+├── lab09/
+├── lab10/
+├── lab11/
+├── lab12/
+├── lab13/
 │
-├── final_project/ # Full final project implementation
-│ ├── src/ # Python source code
-│ ├── database/ # SQLite database files
-│ ├── screenshots/ # Images used for documentation
-│ ├── requirements.txt
-│ └── README.md # Full project documentation
-│
-└── README.md (this file)
----
-```
+└── README.md
 
-## Final Project Overview  
-**Personal Expenses Reports Helper**
+Each folder contains the corresponding laboratory assignment, including scripts, configuration files, reports, and supporting documentation where required.
 
-A Python-based expense-tracking tool with:
+Course Focus Areas
 
-- Terminal menu interface  
-- SQLite database for storing expenses  
-- Statistics module  
-- Pie-chart visualization  
-- Telegram bot integration  
-- Automated weekly reporting via cron  
+The laboratory work covers:
 
-The **full explanation, installation guide, screenshots, and YouTube demo** are provided inside: final_project/README.md
+Linux command-line usage
+
+File permissions and user management
+
+Bash scripting
+
+Cron automation
+
+Package management and troubleshooting
+
+NGINX web server configuration
+
+Reverse proxy setup using proxy_pass
+
+API interaction and testing
+
+Basic penetration testing concepts
+
+Secure coding practices
+
+All labs were completed and tested in an Ubuntu virtual machine environment.
+
+Academic Disclaimer
+
+This repository is created strictly for educational purposes as part of the Information Security course.
+
+All credentials, banking details, passwords, API endpoints, and other sensitive-looking data used in laboratory assignments are fictional and created only for simulation and demonstration.
+
+No real personal, financial, or confidential data was collected, stored, or transmitted.
