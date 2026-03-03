@@ -1,0 +1,72 @@
+Lab 11: Installing Packages from Source - Task Solution
+
+Task: Install simple utilities from source (GitHub). Examples: code editors, disk tools, etc.
+
+Why install from source?
+- Access latest features and fixes not yet in package managers
+- Customize build options and configuration
+- Optimize for specific hardware
+- Software not available as pre-compiled packages
+
+--------------------------------------------------
+Installation Methods Overview
+--------------------------------------------------
+
+1. Classic Method (./configure, make, make install)
+2. CMake (modern build system)
+3. Git clone + make
+4. Python setup.py
+5. Automated install scripts
+
+--------------------------------------------------
+Example 1: bat (modern cat with syntax highlighting)
+--------------------------------------------------
+
+bat is a cat clone with syntax highlighting and Git integration.
+GitHub: https://github.com/sharkdp/bat
+
+# Install Rust (bat is written in Rust)
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source $HOME/.cargo/env
+
+# Clone and build
+git clone https://github.com/sharkdp/bat.git
+cd bat
+cargo build --release
+
+# Install
+sudo cp target/release/bat /usr/local/bin/
+
+# Test
+bat --version
+bat /etc/hosts    # View file with syntax highlighting
+
+--------------------------------------------------
+Example 2: htop (interactive process viewer)
+--------------------------------------------------
+
+htop is an interactive process viewer, better than top.
+GitHub: https://github.com/htop-dev/htop
+
+# Install dependencies
+sudo apt update
+sudo apt install build-essential libncurses5-dev libncursesw5-dev
+
+# Download source
+wget https://github.com/htop-dev/htop/releases/download/3.3.0/htop-3.3.0.tar.xz
+tar -xvf htop-3.3.0.tar.xz
+cd htop-3.3.0
+
+# Classic method: configure, make, make install
+./configure
+make
+sudo make install
+
+# Test
+htop
+
+--------------------------------------------------
+Example 3: fzf (fuzzy finder)
+--------------------------------------------------
+
+fzf is a com
