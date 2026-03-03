@@ -1,25 +1,47 @@
-Lab 10 - NGINX proxy_pass
+Task: Explore Nginx proxy_pass parameter to allow sending requests to a running API.
 
-Goal:
-Set up NGINX as a reverse proxy to forward requests to a Flask API.
+Implementation:
 
-Setup:
-- Flask app (app.py) runs on port 5000.
-- NGINX listens on port 8000 and uses proxy_pass to send traffic to 127.0.0.1:5000.
+A simple Flask API was created (app.py) running on port 5000 with the endpoint /hello returning “Hello from Flask”.
 
-Commands used:
-sudo apt install nginx -y
-sudo nano /etc/nginx/sites-available/my_api
-sudo ln -s /etc/nginx/sites-available/my_api /etc/nginx/sites-enabled/
+The application was started using:
+
+python app.py
+
+The backend was tested directly:
+
+$ curl http://127.0.0.1:5000/hello
+
+Hello from Flask
+
+Then NGINX was configured to use proxy_pass:
+
+server {
+listen 8000;
+
+location / {
+    proxy_pass http://127.0.0.1:5000;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+}
+
+}
+
+After reloading NGINX:
+
 sudo nginx -t
-sudo service nginx reload
+sudo systemctl reload nginx
 
-Tests:
-Backend (5000): $(curl -sS http://127.0.0.1:5000/hello 2>/dev/null || echo FAILED)
-Proxy (8000):   $(curl -sS http://127.0.0.1:8000/hello 2>/dev/null || echo FAILED)
+The reverse proxy was tested:
+
+$ curl http://127.0.0.1:8000/hello
+
+Hello from Flask
 
 Result:
-Both backend and proxy returned “Hello from Flask”.
+
+The request sent to port 8000 was successfully forwarded to the Flask backend on port 5000.
 
 Conclusion:
-Nginx successfully forwarded requests from port 8000 to Flask on port 5000 using proxy_pass.
+
+The proxy_pass directive in NGINX correctly forwards incoming HTTP requests to a backend application server.
