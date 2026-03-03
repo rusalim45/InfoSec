@@ -1,0 +1,79 @@
+rusalim@Ubuntu:~/Desktop/InfoSec$ mkdir lab05
+rusalim@Ubuntu:~/Desktop/InfoSec$ cd lab05
+rusalim@Ubuntu:~/Desktop/InfoSec/lab05$ pwd
+/home/rusalim/Desktop/InfoSec/lab05
+
+================================================== DISPLAY GROUP
+DATABASE ==================================================
+
+rusalim@Ubuntu:~/Desktop/InfoSec/lab05$ cat /etc/group
+
+root:x:0: daemon:x:1: bin:x:2: sys:x:3: adm:x:4: tty:x:5: disk:x:6:
+lp:x:7: mail:x:8: sudo:x:27: staff:x:50: users:x:100:
+
+rusalim@Ubuntu:~/Desktop/InfoSec/lab05$ groups rusalim sudo adm cdrom
+dip plugdev
+
+================================================== CREATE NEW GROUP
+==================================================
+
+rusalim@Ubuntu:~/Desktop/InfoSec/lab05$ sudo groupadd labgroup [sudo]
+password for rusalim:
+
+Verify group:
+
+rusalim@Ubuntu:~/Desktop/InfoSec/lab05$ grep labgroup /etc/group
+labgroup:x:1001:
+
+================================================== CREATE NEW USER
+==================================================
+
+rusalim@Ubuntu:~/Desktop/InfoSec/lab05$ sudo useradd -m labuser
+
+Set password:
+
+rusalim@Ubuntu:~/Desktop/InfoSec/lab05$ sudo passwd labuser New
+password: Retype new password: passwd: password updated successfully
+
+================================================== CHECK USER DETAILS
+==================================================
+
+rusalim@Ubuntu:~/Desktop/InfoSec/lab05$ id labuser uid=1001(labuser)
+gid=1002(labuser) groups=1002(labuser)
+
+rusalim@Ubuntu:~/Desktop/InfoSec/lab05$ grep labuser /etc/passwd
+labuser:x:1001:1002::/home/labuser:/bin/bash
+
+================================================== ADD USER TO GROUP
+==================================================
+
+rusalim@Ubuntu:~/Desktop/InfoSec/lab05$ sudo usermod -aG labgroup
+labuser
+
+Verify again:
+
+rusalim@Ubuntu:~/Desktop/InfoSec/lab05$ id labuser uid=1001(labuser)
+gid=1002(labuser) groups=1002(labuser),1001(labgroup)
+
+================================================== SWITCH TO NEW USER
+==================================================
+
+rusalim@Ubuntu:~/Desktop/InfoSec/lab05$ su - labuser Password:
+
+labuser@Ubuntu:~$ groups labuser labgroup
+
+labuser@Ubuntu:~$ exit
+
+rusalim@Ubuntu:~/Desktop/InfoSec/lab05$
+
+================================================== SUMMARY
+==================================================
+
+1.  Viewed existing system groups using cat /etc/group.
+2.  Created a new group using groupadd.
+3.  Created a new user using useradd.
+4.  Set password using passwd.
+5.  Added user to group using usermod -aG.
+6.  Verified changes using id and groups commands.
+
+All operations were performed on Ubuntu Linux VM.
